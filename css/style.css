@@ -672,6 +672,21 @@ html {
     .navbar .navbar-nav .active a {
       background-color: #bb0007; }
 
+.navbar-toggle {
+  margin: 20px 0; }
+  .navbar-toggle .icon-bar {
+    background-color: #000000; }
+
+@media only screen and (max-width: 767px) {
+  .navbar .navbar-nav {
+    margin: 0;
+    background-color: #101010;
+    z-index: 1; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar .navbar-nav {
+    margin: 0;
+    background-color: #101010;
+    z-index: 1; } }
 .floatleft, .main-menu .menu-right .list-user li {
   float: left; }
 
