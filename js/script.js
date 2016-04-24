@@ -70,8 +70,9 @@ jQuery(function() {
         if (isMobile) {
             stickyElement.css({
                 'position': 'absolute',
-                'top': '0',
-                'z-index': 0
+                'top': 0,
+                'z-index': 1,
+                'opacity' : 1
             });
 
             return true;
@@ -93,15 +94,16 @@ jQuery(function() {
                 stickyElement.css({
                     'position': 'fixed',
                     'top': 0,
-                    'z-index': 1
+                    'z-index': 1,
+                    'opacity' : 1
                 });
             }
         } else {
-
             stickyElement.css({
                 'position': 'absolute',
                 'top': '27px',
-                'z-index': 0
+                'z-index': 0,
+                'opacity' : 0.7
             });
 
         }
