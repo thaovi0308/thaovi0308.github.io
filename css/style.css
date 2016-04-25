@@ -682,6 +682,16 @@ html {
   .navbar-toggle .icon-bar {
     background-color: #000000; }
 
+.carousel-caption {
+  top: 207px;
+  left: 40%;
+  width: 665px;
+  text-shadow: initial; }
+  .carousel-caption h1 {
+    color: #ec1d23; }
+  .carousel-caption p {
+    color: #000000; }
+
 @media only screen and (max-width: 767px) {
   .navbar {
     opacity: 1; }
