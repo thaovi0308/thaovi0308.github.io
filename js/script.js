@@ -48,7 +48,7 @@ jQuery(function() {
 });
 // /**
 //  *  @name plugin sticky
-//  *  @description scroll and fixed
+//  *  @description scroll and fixed 
 //  *  @version 1.0
 //  *  @options
 //  *    option
@@ -83,7 +83,7 @@ jQuery(function() {
 
 //     /**
 //      * [toggleFixedTop toggle fixed navigation]
-//      * @param  {[number]} scrollPosition
+//      * @param  {[number]} scrollPosition 
 //      * @param  {[array]} stickyElement
 //      * @param  {[number]} $position
 //      * @return {none}
@@ -114,7 +114,7 @@ jQuery(function() {
 //      * @param  {[array]} element
 //      * @param  {[number]} $position
 //      * @return {[none]}
-
+     
 //     var scrollPage = function(stickyElement, $position) {
 //         if (checkMobile(stickyElement)) {
 //             return;

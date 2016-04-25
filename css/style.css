@@ -570,9 +570,6 @@ a:hover {
 .image-hover:hover {
   opacity: 0.8; }
 
-.text-article {
-  text-align: justify; }
-
 /*animation element*/
 .animation-element {
   opacity: 0;
@@ -663,13 +660,13 @@ html {
 .navbar {
   background-image: url(../images/nav-background.png);
   background-repeat: repeat-x;
-  /*border-radius: 0;*/
+  border-radius: 0;
   opacity: 0.7;
-  /*margin-bottom: 0;*/
+  margin-bottom: 0;
   border: none;
-  /*position: absolute;*/
-  /*top: 27px;*/
   width: 100%; }
+  .navbar .navbar-header img {
+    max-height: 70px; }
   .navbar .navbar-nav {
     margin-left: 87px; }
     .navbar .navbar-nav li a {
@@ -686,19 +683,27 @@ html {
     background-color: #000000; }
 
 @media only screen and (max-width: 767px) {
-  .navbar .navbar-nav {
-    margin: 0;
-    background-color: #101010;
-    z-index: 1; }
-    .navbar .navbar-nav li a {
-      padding: 10px 15px; } }
+  .navbar {
+    opacity: 1; }
+    .navbar .navbar-toggle {
+      margin-right: 10px; }
+    .navbar .navbar-nav {
+      margin: 0;
+      background-color: #101010;
+      z-index: 1; }
+      .navbar .navbar-nav li a {
+        padding: 10px 15px; } }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .navbar .navbar-nav {
-    margin: 0;
-    background-color: #101010;
-    z-index: 1; }
-    .navbar .navbar-nav li a {
-      padding: 10px 15px; } }
+  .navbar {
+    opacity: 1; }
+    .navbar .navbar-toggle {
+      margin-right: 10px; }
+    .navbar .navbar-nav {
+      margin: 0;
+      background-color: #101010;
+      z-index: 1; }
+      .navbar .navbar-nav li a {
+        padding: 10px 15px; } }
 .floatleft, .main-menu .menu-right .list-user li {
   float: left; }
 
@@ -957,7 +962,13 @@ html {
     padding-top: 10px; }
 
   .logo-footer .img-responsive {
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  .main-footer .idea-customer .slide-footer .slide-text {
+    padding-left: 60px; }
+
+  .main-footer .idea-customer .slide-footer .single-slick .slick-dots {
+    top: 220px; } }
 @media only screen and (max-width: 767px) {
   .main-footer .footer-top .info-spa h2 {
     padding-left: 0; }
