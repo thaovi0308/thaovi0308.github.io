@@ -665,8 +665,6 @@ html {
   margin-bottom: 0;
   border: none;
   width: 100%; }
-  .navbar .navbar-header img {
-    max-height: 70px; }
   .navbar .navbar-nav {
     margin-left: 87px; }
     .navbar .navbar-nav li a {
@@ -677,15 +675,10 @@ html {
     .navbar .navbar-nav .active a {
       background-color: #bb0007; }
 
-.navbar-toggle {
-  margin: 20px 0; }
-  .navbar-toggle .icon-bar {
-    background-color: #000000; }
+.navbar-toggle .icon-bar {
+  background-color: #000000; }
 
 .carousel-caption {
-  top: 207px;
-  left: 40%;
-  width: 665px;
   text-shadow: initial; }
   .carousel-caption h1 {
     color: #ec1d23; }
@@ -694,7 +687,8 @@ html {
 
 @media only screen and (max-width: 767px) {
   .navbar {
-    opacity: 1; }
+    opacity: 1;
+    height: 50px; }
     .navbar .navbar-toggle {
       margin-right: 10px; }
     .navbar .navbar-nav {
@@ -702,10 +696,13 @@ html {
       background-color: #101010;
       z-index: 1; }
       .navbar .navbar-nav li a {
-        padding: 10px 15px; } }
+        padding: 10px 15px; }
+    .navbar .navbar-header img {
+      max-height: 50px; } }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .navbar {
-    opacity: 1; }
+    opacity: 1;
+    height: 50px; }
     .navbar .navbar-toggle {
       margin-right: 10px; }
     .navbar .navbar-nav {
@@ -713,7 +710,9 @@ html {
       background-color: #101010;
       z-index: 1; }
       .navbar .navbar-nav li a {
-        padding: 10px 15px; } }
+        padding: 10px 15px; }
+    .navbar .navbar-header img {
+      max-height: 50px; } }
 .floatleft, .main-menu .menu-right .list-user li {
   float: left; }
 
