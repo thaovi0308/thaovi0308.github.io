@@ -631,6 +631,9 @@ a:hover {
   .bounce-up:hover {
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25); }
 
+.img-responsive {
+  margin: 0 auto; }
+
 @media only screen and (max-width: 767px) {
   .bounce-up {
     min-height: 320px; } }
@@ -675,10 +678,16 @@ html {
     .navbar .navbar-nav .active a {
       background-color: #bb0007; }
 
+.img-footer-block .col-md-3 {
+  padding: 0; }
+.img-footer-block .col-xs-6 {
+  padding: 0; }
+
 .navbar-toggle .icon-bar {
   background-color: #000000; }
 
 .carousel-caption {
+  padding-left: 20%;
   text-shadow: initial; }
   .carousel-caption h1 {
     color: #ec1d23; }
@@ -698,7 +707,12 @@ html {
       .navbar .navbar-nav li a {
         padding: 10px 15px; }
     .navbar .navbar-header img {
-      max-height: 50px; } }
+      max-height: 50px; }
+
+  .carousel-caption {
+    padding-left: 25%; }
+    .carousel-caption h1 {
+      font-size: 20px; } }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .navbar {
     opacity: 1;
