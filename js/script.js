@@ -11,7 +11,7 @@ jQuery(function() {
     });
 
     // Init trigger scroll
-    var $animation_elements = $('.animation-element');
+    var $animation_elements = $('.animation-element,.bounce-element');
     var $window = $(window);
     var check_if_in_view = function() {
         var window_height = $window.height();

@@ -2352,6 +2352,21 @@ html {
         content: "+";
         padding-right: 3px; }
 
+.bounce-element {
+  opacity: 0;
+  transition: all 700ms ease-out;
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.bounce-element.in-view {
+  opacity: 1;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px); }
+
 .top-content .contact-block {
   margin-bottom: 40px; }
   .top-content .contact-block .image-block {
