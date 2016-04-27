@@ -633,6 +633,12 @@ a:hover {
   .bounce-up .img-responsive {
     margin: 0 auto; }
 
+.carousel-control.right {
+  background-image: initial; }
+
+.carousel-control.left {
+  background-image: initial; }
+
 @media only screen and (max-width: 767px) {
   .bounce-up {
     min-height: 320px; } }
@@ -659,13 +665,7 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .img-footer-block .img-br:hover > a::after {
-    background: rgba(255, 231, 231, 0.8); }
-
-  .carousel-control.right {
-    background-image: initial; }
-
-  .carousel-control.left {
-    background-image: initial; } }
+    background: rgba(255, 231, 231, 0.8); } }
 @media screen and (max-width: 970px) {
   .img-footer-block .img-br:hover > a::after {
     background: rgba(255, 231, 231, 0.8); } }
