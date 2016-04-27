@@ -659,7 +659,13 @@ a:hover {
 
 @media screen and (max-width: 768px) {
   .img-footer-block .img-br:hover > a::after {
-    background: rgba(255, 231, 231, 0.8); } }
+    background: rgba(255, 231, 231, 0.8); }
+
+  .carousel-control.right {
+    background-image: initial; }
+
+  .carousel-control.left {
+    background-image: initial; } }
 @media screen and (max-width: 970px) {
   .img-footer-block .img-br:hover > a::after {
     background: rgba(255, 231, 231, 0.8); } }
