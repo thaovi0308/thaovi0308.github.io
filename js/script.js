@@ -4,329 +4,112 @@
  * @version 1.0
  */
 jQuery(function() {
-    // Slide footer
-    // $('.single-slick').slick({
-    //     dots: true,
-    //     arrows: false
-    // });
 
-    // // Init trigger scroll
-    // var $animation_elements = $('.animation-element,.bounce-element');
-    // var $window = $(window);
-    // var check_if_in_view = function() {
-    //     var window_height = $window.height();
-    //     var window_top_position = $window.scrollTop();
-    //     var window_bottom_position = (window_top_position + window_height);
-    //     $.each($animation_elements, function() {
-    //         var $element = $(this);
-    //         var element_height = $element.outerHeight();
-    //         var element_top_position = $element.offset().top;
-    //         var element_bottom_position = (element_top_position + element_height);
+  /* Reset svg file */
+  (function resetSvg() {
+    $('img.svg').each(function() {
+      var $img = $(this);
+      var imgID = $img.attr('id');
+      var imgClass = $img.attr('class');
+      var imgURL = $img.attr('src');
 
-    //         //check to see if this current container is within viewport
-    //         if ((element_bottom_position >= window_top_position) &&
-    //             (element_top_position <= window_bottom_position)) {
-    //             $element.addClass('in-view');
-    //         } else {
-    //             $element.removeClass('in-view');
-    //         }
-    //     });
-    // }
-    // $window.on('scroll resize', check_if_in_view);
-    // $window.trigger('scroll');
-    
-    /* Reset svg file */
-    (function resetSvg () {
-        jQuery('img.svg').each(function(){
-            var $img = jQuery(this);
-            var imgID = $img.attr('id');
-            var imgClass = $img.attr('class');
-            var imgURL = $img.attr('src');
-        
-            jQuery.get(imgURL, function(data) {
-                // Get the SVG tag, ignore the rest
-                var $svg = jQuery(data).find('svg');
-        
-                // Add replaced image's ID to the new SVG
-                if(typeof imgID !== 'undefined') {
-                    $svg = $svg.attr('id', imgID);
-                }
-                // Add replaced image's classes to the new SVG
-                if(typeof imgClass !== 'undefined') {
-                    $svg = $svg.attr('class', imgClass+' replaced-svg');
-                }
-        
-                // Remove any invalid XML tags as per http://validator.w3.org
-                $svg = $svg.removeAttr('xmlns:a');
-                
-                // Check if the viewport is set, else we gonna set it if we can.
-                if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-                    $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-                }
-        
-                // Replace image with new SVG
-                $img.replaceWith($svg);
-        
-            }, 'xml');
-        });
-    })();
+      $.get(imgURL, function(data) {
+        // Get the SVG tag, ignore the rest
+        var $svg = $(data).find('svg');
 
-    // Init google map
-    function initialize() {
-        var mapProp = {
-            center: new google.maps.LatLng(10.8166418, 106.6738968),
-            zoom: 12,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map_canvas"), mapProp);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
-});
-/**
- *  @name plugin interchange image
- *  @description change image follow resize screen
- *  @version 1.0
- *  @options
- *    option
- *  @events
- *    event
- *  @methods
- *    init
- *    destroy
- *    getImage
- *    setImage
- */
-;(function($, window) {
-    'use strict';
-
-    var pluginName = 'interchange';
-    var outerDims = {
-        width: $(window).width()
-    };
-
-    /**
-     * [getImage get path image]
-     * @param  {[string]} options [string container array path]
-     * @return {[string]}         [path source]
-     */
-    var getImage = function(options) {
-        var imgSrc = '';
-        var regularChar = new RegExp('\'', 'g');
-        options = options.replace(regularChar, '');
-        options = options.substring(1, options.length - 1);
-        options = options.split(',');
-
-        if (options != null && options.length > 0) {
-            // Screen default
-            imgSrc = options[0];
-            // Extra small devices
-            if (768 > outerDims.width) {
-                imgSrc = options[0];
-            } else if (768 <= outerDims.width) { // Small devices Tablets and Medium devices
-                imgSrc = options[1];
-            }
+        // Add replaced image's ID to the new SVG
+        if (typeof imgID !== 'undefined') {
+          $svg = $svg.attr('id', imgID);
+        }
+        // Add replaced image's classes to the new SVG
+        if (typeof imgClass !== 'undefined') {
+          $svg = $svg.attr('class', imgClass + ' replaced-svg');
         }
 
-        return imgSrc;
-    };
+        // Remove any invalid XML tags as per http://validator.w3.org
+        $svg = $svg.removeAttr('xmlns:a');
 
-    /**
-     * [setImage set path image]
-     * @param {[array]} element [jquery element]
-     * @param {[string]} options [string container array path]
-     */
-    var setImage = function(element, options) {
-        var imgSrc = getImage(options);
-
-        if (element.is('img')) {
-            var srcNow = element.attr('src');
-
-            if (srcNow !== imgSrc) {
-                element.attr('src', imgSrc);
-            }
-        } else {
-            var backgroundImgNow = element.css('background-image');
-
-            if (backgroundImgNow.indexOf(imgSrc) === -1) {
-                var backgroundImg = 'url(' + imgSrc + ')';
-                element.css('background-image', backgroundImg);
-            }
+        // Check if the viewport is set, else we gonna set it if we can.
+        if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+          $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
         }
-    };
 
-    function Interchange(element, options) {
-        this.element = $(element);
-        this.options = $.extend({}, $.fn[pluginName].defaults, this.element.data(), options);
-        this.init();
-    }
+        // Replace image with new SVG
+        $img.replaceWith($svg);
 
-    Interchange.prototype = {
-        init: function() {
-            var that = this,
-                el = that.element,
-                options = that.options.interchange;
-
-            if ('string' === typeof options) {
-                // Call function set image defaut for element
-                setImage(el, options);
-                // Set resize on screen
-                $(window).on('resize', function() {
-                    outerDims.width = $(window).width();
-                    setImage(el, options);
-                });
-            }
-
-        },
-
-        destroy: function() {
-            // remove events
-            // deinitialize
-            $.removeData(this.element[0], pluginName);
-        }
-    };
-
-    $.fn[pluginName] = function(options, params) {
-        return this.each(function() {
-            var instance = $.data(this, pluginName);
-
-            if (!instance) {
-                $.data(this, pluginName, new Interchange(this, options));
-            } else if (instance[options]) {
-                instance[options](params);
-            }
-        });
-    };
-
-    $.fn[pluginName].defaults = {};
-
-    $(function() {
-        $('[data-' + pluginName + ']')[pluginName]();
+      }, 'xml');
     });
+  })();
 
-}(jQuery, window));
+  // Call sticky top navigation
+  (function() {
+      Sticky();
+  })()
 
-// /**
-//  *  @name plugin sticky
-//  *  @description scroll and fixed 
-//  *  @version 1.0
-//  *  @options
-//  *    option
-//  *  @events
-//  *    event
-//  *  @methods
-//  *    init
-//  *    destroy
-//  */
-// ;(function($) {
-//     'use strict';
+  function processScrollWindow() {
+    var positionWindow = $(window).scrollTop();
+    // Add class fixed
+    if (positionWindow >= this.positionNav) {
+      if (!this.nav.hasClass('navbar-fixed-top')) {
+        this.nav.addClass('navbar-fixed-top');
+      }
+    } else {
+      if (this.nav.hasClass('navbar-fixed-top')) {
+        this.nav.removeClass('navbar-fixed-top');
+      }
+    }
+  }
 
-//     var pluginName = 'sticky',
-//         $win = $(window);
+  function processOnClick(e) {
+    // Remove event default
+      e.preventDefault();
+      var aTag = $(this);
+      if (!aTag.hasClass('active')) {
+          var nav = $('nav');
+        //   var positionNav = nav.offset().top;
+          // Remove curent active
+          nav.find('ul li').removeClass('active');
+          // Add class active
+          aTag.parent().addClass('active');
+          var sectionId = aTag.attr('href');
+          $('html, body').animate({
+              scrollTop: $(sectionId).offset().top - 100
+          }, 1000);
+      }
+  }
 
-//     var checkMobile = function(stickyElement) {
-//         var isMobile = window.Modernizr.mq('(max-width: 992px)');
+  (function() {
+      $('.bnt-down').off('click')
+                    .on('click', function() {
+                        $('html, body').animate({
+                            scrollTop: $('#services').offset().top - 100
+                        }, 1000);
+                    })
+  })()
 
-//         if (isMobile) {
-//             stickyElement.css({
-//                 'position': 'absolute',
-//                 'top': 0,
-//                 'z-index': 1,
-//                 'opacity' : 1
-//             });
+  // Handle sticky top navigation
+  function Sticky() {
+    // Get top navigation
+    this.nav = $('nav');
+    // Get position navigation
+    this.positionNav = nav.offset().top;
+    // On click a tag
+    this.aTags = this.nav.find('ul a');
+    this.aTags.on('click', processOnClick);
+    // On window scroll
+    $(window).off('scroll').on('scroll', processScrollWindow.bind(this));
+    // Initialize load page
+    processScrollWindow.call(this);
+  }
 
-//             return true;
-//         }
-//         return false;
-//     };
-
-
-//     /**
-//      * [toggleFixedTop toggle fixed navigation]
-//      * @param  {[number]} scrollPosition 
-//      * @param  {[array]} stickyElement
-//      * @param  {[number]} $position
-//      * @return {none}
-//      */
-//     var toggleFixedTop = function(scrollPosition, stickyElement, $position) {
-//         if (scrollPosition >= $position) {
-//             if ('fixed' !== stickyElement.css('position')) {
-//                 stickyElement.css({
-//                     'position': 'fixed',
-//                     'top': 0,
-//                     'z-index': 1,
-//                     'opacity' : 1
-//                 });
-//             }
-//         } else {
-//             stickyElement.css({
-//                 'position': 'absolute',
-//                 'top': '27px',
-//                 'z-index': 0,
-//                 'opacity' : 0.7
-//             });
-
-//         }
-//     };
-
-//     *
-//      * [scrollPage Handle scroll page]
-//      * @param  {[array]} element
-//      * @param  {[number]} $position
-//      * @return {[none]}
-     
-//     var scrollPage = function(stickyElement, $position) {
-//         if (checkMobile(stickyElement)) {
-//             return;
-//         }
-//         var scrollPosition = $win.scrollTop();
-//         toggleFixedTop(scrollPosition, stickyElement, $position);
-//     };
-
-//     function Sticky(element, options) {
-//         this.element = $(element);
-//         this.options = $.extend({}, $.fn[pluginName].defaults, this.element.data(), options);
-//         this.init();
-//     }
-
-//     Sticky.prototype = {
-//         init: function() {
-//             var that = this,
-//                 stickyElement = that.element,
-//                 $position = stickyElement.position().top;
-//             // Handle scroll
-//             $win.scroll(function() {
-//                 scrollPage(stickyElement, $position);
-//             });
-//             $win.resize(function() {
-//                 scrollPage(stickyElement, $position);
-//             });
-//             // Trigger scroll
-//             $win.scroll();
-//         },
-
-//         destroy: function() {
-//             // remove events
-//             // deinitialize
-//             $.removeData(this.element[0], pluginName);
-//         }
-//     };
-
-//     $.fn[pluginName] = function(options, params) {
-//         return this.each(function() {
-//             var instance = $.data(this, pluginName);
-
-//             if (!instance) {
-//                 $.data(this, pluginName, new Sticky(this, options));
-//             } else if (instance[options]) {
-//                 instance[options](params);
-//             }
-//         });
-//     };
-
-//     $.fn[pluginName].defaults = {};
-
-//     $(function() {
-//         $('[data-' + pluginName + ']')[pluginName]();
-//     });
-
-// }(jQuery));
+  // Init google map
+  function initialize() {
+    var mapProp = {
+      center: new google.maps.LatLng(10.8166418, 106.6738968),
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"), mapProp);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+});

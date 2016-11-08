@@ -9,6 +9,7 @@
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, minimal-ui, minimum-scale=1.0,  maximum-scale=1.0, user-scalable=no">
     <link rel="icon" href="favicon-16x16.png" type="image/x-icon" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
@@ -16,16 +17,16 @@
     <script src="js/modernizr.js"></script>
   </head>
   <body class="home">
-    <header>
+    <header id="home">
       <div class="container">
         <div class="row header">
-          <div class="col-md-5"><a href="/index.html"><img src="images/logo.png" alt="spa-logo" class="img-responsive"></a></div>
-          <div class="col-md-7">
-            <ull class="list-unstyled list-inline reset-list">
-              <li><a><img src="fonts/icons-svg/skype-logo.svg" alt="icon-skype" class="svg">&nbsp;&nbsp;Call to action</a></li>
-              <li><a><img src="fonts/icons-svg/telephone-handle-silhouette.svg" alt="icon-telephone" class="svg">&nbsp;&nbsp;+84 1686 737 610</a></li>
-              <li><a href="facebook" title="facebook"><img src="fonts/icons-svg/facebook.svg" alt="icon-facebook" class="svg"></a><a href="twitter" title="twitter"><img src="fonts/icons-svg/twitter.svg" alt="icon-twitter" class="svg"></a><a href="google-plus-logo" title="google-plus-logo"><img src="fonts/icons-svg/google-plus-logo.svg" alt="icon-google-plus-logo" class="svg"></a><a href="rss" title="rss"><img src="fonts/icons-svg/rss-symbol.svg" alt="icon-rss-symbol" class="svg"></a></li>
-            </ull>
+          <div class="col-md-3 col-xs-12 pull-left"><a href="/index.html"><img src="images/logo.png" alt="spa-logo" class="img-responsive"></a></div>
+          <div class="col-md-9 col-xs-12">
+            <ul class="list-unstyled list-inline reset-list pull-right">
+              <li><a><img src="fonts/icons-svg/skype-logo.svg" alt="icon-skype" class="svg"><span class="hidden-xs">&nbsp;&nbsp;Call to action</span></a></li>
+              <li><a><img src="fonts/icons-svg/telephone-handle-silhouette.svg" alt="icon-telephone" class="svg"><span class="hidden-xs">&nbsp;&nbsp;+84 1686 737 610</span></a></li>
+              <li><a href="facebook" title="facebook"><img src="fonts/icons-svg/facebook-logo.svg" alt="icon-facebook" class="svg"></a><a href="twitter" title="twitter"><img src="fonts/icons-svg/twitter.svg" alt="icon-twitter" class="svg"></a><a href="google-plus-logo" title="google-plus-logo"><img src="fonts/icons-svg/google-plus-logo.svg" alt="icon-google-plus-logo" class="svg"></a><a href="rss" title="rss"><img src="fonts/icons-svg/rss-symbol.svg" alt="icon-rss-symbol" class="svg"></a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -35,54 +36,54 @@
             <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed pull-right"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
           </div>
           <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="/index.html">HOME</a></li>
-              <li><a href="/about.html">SERVICES</a></li>
-              <li><a href="/facelifts.html">SHOWREELS</a></li>
-              <li><a href="/beauty-secrets.html">PORTFOLIO</a></li>
-              <li><a href="/contact.html">BLOG</a></li>
-              <li><a href="/contact.html">CONTACT</a></li>
+            <ul id="menu" class="nav navbar-nav">
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#showreels">SHOWREELS</a></li>
+              <li><a href="#portfolio">PORTFOLIO</a></li>
+              <li><a href="#blog">BLOG</a></li>
+              <li><a href="#google-map">CONTACT</a></li>
             </ul>
           </div>
         </div>
       </nav>
-      <div id="myCarousel" data-ride="carousel" class="carousel slide">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active">        </li>
-          <li data-target="#myCarousel" data-slide-to="1">        </li>
-          <li data-target="#myCarousel" data-slide-to="2">     </li>
-        </ol>
+      <div id="header-carousel" data-ride="carousel" class="carousel slide">
+        <ol class="carousel-indicators"> 
+          <li data-target="#header-carousel" data-slide-to="0" class="active">        </li>
+          <li data-target="#header-carousel" data-slide-to="1">        </li>
+          <li data-target="#header-carousel" data-slide-to="2"></li>
+        </ol><span class="fa fa-chevron-down bnt-down"></span>
         <div role="listbox" class="carousel-inner">
           <div class="item active"><img src="images/img-home.png" alt="First slide" data-interchange="[images/img-home.png]" class="first-slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1 class="text-left">FIFU</h1>
-                <p class="text-left hidden-xs hidden-sm">Check our video</p>
+                <p class="text-left bold">CHECK OUR VIDEO</p>
+                <p class="text-left">& BOOK NOW!</p>
               </div>
             </div>
           </div>
           <div class="item"><img src="images/img-home.png" alt="Second slide" data-interchange="[images/img-home.png]" class="second-slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1 class="text-left">XAMPLE</h1>
-                <p class="text-left hidden-xs hidden-sm">XAMPLE </p>
+                <p class="text-left bold">CHECK OUR VIDEO 2</p>
+                <p class="text-left">& BOOK NOW 2!</p>
               </div>
             </div>
           </div>
           <div class="item"><img src="images/img-home.png" alt="There slide" data-interchange="[images/img-home.png]" class="third-slide">
             <div class="container">
               <div class="carousel-caption">
-                <h1 class="text-left">XAMPLE</h1>
-                <p class="text-left hidden-xs hidden-sm">XAMPLE  </p>
+                <p class="text-left bold">CHECK OUR VIDEO 3</p>
+                <p class="text-left">& BOOK NOW 3!</p>
               </div>
             </div>
           </div>
-        </div><a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#myCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
+        </div><a href="#header-carousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#header-carousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
       </div>
     </header>
     <main>
       <!-- service block-->
-      <section class="services margin-top-150">
+      <section id="services" class="padding-top-150 active">
         <div class="container">
           <h2 class="text-center">SERVICES</h2>
           <hr class="line">
@@ -102,73 +103,96 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 future-backgroud">
-            <div class="future-panel text-right">
-              <h3 class="text-center">SHOWREELS</h3>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
+      </section>
+      <section id="showreels">
+        <div class="col-md-12 future-backgroud">
+          <div class="future-panel text-right">
+            <h3 class="text-center">SHOWREELS</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
       </section>
       <!-- portfolio block-->
-      <section class="container portfolio margin-top-150">
+      <section id="portfolio" class="container margin-top-150">
         <h2 class="text-center">PORTFOLIO</h2>
         <hr class="line">
         <p class="description text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
-        <div class="row img-block">
-          <div class="col-md-4 col-sm-6"><img src="../../images/city-of-future-2.png" alt="city-of-future" class="img-responsive"></div>
-          <div class="col-md-4 col-sm-6"><img src="../../images/tvc-quang-cao.png" alt="quang-cao" class="img-responsive"></div>
-          <div class="col-md-4 col-sm-6"><img src="../../images/thumb.png" alt="thumb" class="img-responsive"></div>
-          <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/Thavorn_Wedding_Phuket_Romantic_Beachside.png" alt="Thavorn_Wedding_Phuket_Romantic_Beachside" class="img-responsive"></div>
-          <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/future-car-concept.png" alt="car-concept" class="img-responsive"></div>
-          <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/A-Fantasy-Mushroom-House-Photo-Manipulation.png" alt="Mushroom-House" class="img-responsive"></div>
+        <div id="feauture-carousel" class="carousel slide">
+          <div role="listbox" class="carousel-inner text-center">
+            <div class="item active">
+              <div class="row img-block">
+                <div class="col-md-4 col-sm-6"><img src="../../images/city-of-future-2.png" alt="city-of-future" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6"><img src="../../images/tvc-quang-cao.png" alt="quang-cao" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6"><img src="../../images/thumb.png" alt="thumb" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/Thavorn_Wedding_Phuket_Romantic_Beachside.png" alt="Thavorn_Wedding_Phuket_Romantic_Beachside" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/future-car-concept.png" alt="car-concept" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/A-Fantasy-Mushroom-House-Photo-Manipulation.png" alt="Mushroom-House" class="img-responsive"></div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="row img-block">
+                <div class="col-md-4 col-sm-6"><img src="../../images/future-car-concept.png" alt="placeholder" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6"><img src="../../images/future-car-concept.png" alt="placeholder" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6"><img src="../../images/future-car-concept.png" alt="placeholder" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/future-car-concept.png" alt="placeholder" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/future-car-concept.png" alt="placeholder" class="img-responsive"></div>
+                <div class="col-md-4 col-sm-6 margin-top-12"><img src="../../images/future-car-concept.png" alt="placeholder" class="img-responsive"></div>
+              </div>
+            </div>
+          </div>
+          <div class="control-block"><a href="#feauture-carousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#feauture-carousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right margin-left-10"></span><span class="sr-only">Next</span></a></div>
         </div>
       </section>
       <!-- blog block-->
-      <section class="container blog margin-top-150">
+      <section id="blog" class="container margin-top-150">
         <h2 class="text-center">BLOG</h2>
         <hr class="line">
         <p class="description text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in egestas lectus. Etiam tempor odio tellus, at bibendum neque faucibus quis. Sed vel facilisis elit. Nullam fringilla pharetra diam non accumsan. Morbi eget aliquam mauris. Etiam vehicula efficitur mi.</p>
         <div class="row">
           <div class="col-md-6">
-            <div></div>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing.</h4>
-            <hr class="line">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit et elit interdum semper vel nec diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit et elit interdum semper vel nec diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-            <div><span class="pull-left">guitar lessons</span><span class="pull-right">icon arrow</span></div>
+            <div class="info">
+              <div class="icon-block pull-right">
+                <div class="message"><span class="fa fa-comments fa-lg"></span><br><span>19</span></div>
+                <div class="calender"><span class="fa fa-calendar fa-lg"></span><br><span>23 / 09</span></div>
+              </div>
+            </div>
+            <div class="content">
+              <h4 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit sit amet, consectetur adipiscing.</h4><span class="line-left"></span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit et elit interdum semper vel nec diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis elit et elit interdum semper vel nec diam. Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+              <div class="go-to"><span class="fa fa-folder-open brown-color">&nbsp;&nbsp;</span><span class="brown-color">GUITAR LESSONS </span><span class="fa fa-chevron-circle-right fa-lg pull-right"></span></div>
+            </div>
           </div>
           <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-7">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4><span>GUITAR LESSONS</span>
+            <div class="item-right margin-bottom-47">
+              <div class="col-md-3 gray-block"></div>
+              <div class="col-md-7 white-block">
+                <h4 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4><span class="fa fa-folder-open"></span><span>GUITAR LESSONS</span>
               </div>
               <div class="col-md-2">
-                <p>icon</p>
-                <p>icon</p>
+                <div class="message"><span class="fa fa-comments fa-lg"></span><br><span>8</span></div>
+                <div class="calender"><span class="fa fa-calendar fa-lg"></span><br><span>06 / 09</span></div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-7">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4><span>GUITAR LESSONS</span>
+            <div class="item-right margin-bottom-47">
+              <div class="col-md-3 gray-block"></div>
+              <div class="col-md-7 white-block">
+                <h4 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4><span class="fa fa-folder-open"></span><span>GUITAR LESSONS</span>
               </div>
               <div class="col-md-2">
-                <p>icon</p>
-                <p>icon</p>
+                <div class="message"><span class="fa fa-comments fa-lg"></span><br><span>8</span></div>
+                <div class="calender"><span class="fa fa-calendar fa-lg"></span><br><span>06 / 09</span></div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-3"></div>
-              <div class="col-md-7">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4><span>GUITAR LESSONS</span>
+            <div class="item-right margin-bottom-47">
+              <div class="col-md-3 gray-block"></div>
+              <div class="col-md-7 brown-block">
+                <h4 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4><span class="fa fa-folder-open"></span><span>GUITAR LESSONS</span>
               </div>
               <div class="col-md-2">
-                <p>icon</p>
-                <p>icon</p>
+                <div class="message"><span class="fa fa-comments fa-lg"></span><br><span>8</span></div>
+                <div class="calender"><span class="fa fa-calendar fa-lg"></span><br><span>06 / 08</span></div>
               </div>
             </div>
           </div>
@@ -197,7 +221,7 @@
         </div>
       </section>
       <!-- map block-->
-      <section class="google-map">
+      <section id="google-map">
         <div id="map_canvas" style="height:300px;"></div>
       </section>
     </main>
@@ -243,7 +267,7 @@
             </div>
             <div class="col-md-6">
               <ul class="list-unstyled list-inline text-right">
-                <li><a href="facebook" title="facebook"><img src="fonts/icons-svg/facebook.svg" alt="icon-facebook" class="svg"></a></li>
+                <li><a href="facebook" title="facebook"><img src="fonts/icons-svg/facebook-logo.svg" alt="icon-facebook" class="svg"></a></li>
                 <li><a href="twitter" title="twitter"><img src="fonts/icons-svg/twitter.svg" alt="icon-twitter" class="svg"></a></li>
                 <li><a href="google-plus-logo" title="google-plus"><img src="fonts/icons-svg/google-plus-logo.svg" alt="icon-google-plus-logo" class="svg"></a></li>
                 <li><a href="rss" title="rss"><img src="fonts/icons-svg/rss-symbol.svg" alt="icon-rss" class="svg"></a></li>
